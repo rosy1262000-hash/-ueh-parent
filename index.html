@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123f70">
+  <title>UEH Parent Connect</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <section id="login-screen" class="login-screen">
+      <div class="login-art">
+        <div class="brand brand-light"><span class="brand-mark">U</span><span>UEH Parent Connect</span></div>
+        <div class="art-copy">
+          <span class="eyebrow">KẾT NỐI • ĐỒNG HÀNH • THẤU HIỂU</span>
+          <h1>Đồng hành cùng con<br>trên hành trình đại học.</h1>
+          <p>Một không gian để phụ huynh cập nhật thông tin học tập, lịch trình và thông báo quan trọng của nhà trường.</p>
+          <div class="art-points"><span>✓ Thông tin tập trung</span><span>✓ Cập nhật thuận tiện</span><span>✓ Tôn trọng quyền riêng tư</span></div>
+        </div>
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-foot">SẢN PHẨM MINH HỌA CHO DỰ ÁN DESIGN THINKING</div>
+      </div>
+      <div class="login-side">
+        <div class="login-box">
+          <div class="brand brand-dark"><span class="brand-mark">U</span><span>UEH Parent Connect</span></div>
+          <div class="login-heading"><span class="eyebrow blue">CỔNG THÔNG TIN PHỤ HUYNH</span><h2>Chào mừng trở lại</h2><p>Đăng nhập để xem thông tin được chia sẻ với bạn.</p></div>
+          <form id="login-form">
+            <label for="email">Email</label>
+            <input id="email" type="email" value="phuhuynh@example.com" required autocomplete="username">
+            <label for="password">Mật khẩu</label>
+            <div class="password-wrap"><input id="password" type="password" value="parent123" required autocomplete="current-password"><button type="button" id="toggle-password" class="eye-btn" aria-label="Hiện mật khẩu">Hiện</button></div>
+            <div class="login-options"><label class="check-label"><input type="checkbox" checked> Ghi nhớ đăng nhập</label><a href="#" id="forgot-link">Quên mật khẩu?</a></div>
+            <button class="btn btn-primary btn-full" type="submit">Đăng nhập <span>→</span></button>
+            <p class="login-error" id="login-error" role="alert"></p>
+          </form>
+          <div class="demo-hint"><strong>Tài khoản dùng thử</strong><br>Email: phuhuynh@example.com<br>Mật khẩu: parent123</div>
+          <p class="login-legal">Đây là bản demo độc lập, không phải cổng thông tin chính thức của UEH. Không nhập mật khẩu thật.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="dashboard hidden">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand brand-light sidebar-brand"><span class="brand-mark">U</span><span>UEH Parent<br><small>CONNECT</small></span></div>
+        <div class="side-label">MENU CHÍNH</div>
+        <nav class="side-nav" aria-label="Điều hướng chính">
+          <button class="nav-link active" data-page="overview"><span>▦</span>Tổng quan</button>
+          <button class="nav-link" data-page="study"><span>▤</span>Kết quả học tập</button>
+          <button class="nav-link" data-page="schedule"><span>▦</span>Lịch học & lịch thi</button>
+          <button class="nav-link" data-page="tuition"><span>▣</span>Học phí</button>
+          <button class="nav-link" data-page="activities"><span>✳</span>Hoạt động sinh viên</button>
+          <button class="nav-link" data-page="announcements"><span>♧</span>Thông báo</button>
+          <button class="nav-link" data-page="support"><span>✉</span>Hỗ trợ</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="privacy-mini"><span class="privacy-icon">♧</span><div><b>Quyền riêng tư</b><small>Thông tin được chia sẻ có kiểm soát.</small></div></div>
+          <button class="nav-link" data-page="settings"><span>⚙</span>Cài đặt</button>
+          <button class="nav-link logout-link" id="logout-btn"><span>↪</span>Đăng xuất</button>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobile-menu" aria-label="Mở menu">☰</button>
+          <div class="breadcrumb">Cổng phụ huynh <span>/</span> <b id="breadcrumb-current">Tổng quan</b></div>
+          <div class="top-actions">
+            <button class="icon-button notification-trigger" id="top-notifications" aria-label="Thông báo">♧<i></i></button>
+            <div class="user-menu"><div class="avatar">PH</div><div class="user-meta"><b>Phụ huynh</b><small>Tài khoản mẫu</small></div></div>
+          </div>
+        </header>
+        <div class="content-wrap">
+          <div class="demo-banner"><span>ⓘ</span> <b>Chế độ dữ liệu minh họa</b> — Toàn bộ điểm số, lịch học và học phí trên website là dữ liệu giả lập.</div>
+          <div id="page-content"></div>
+          <footer class="footer"><span>UEH Parent Connect · Prototype</span><span>Không thuộc hệ thống chính thức của Đại học Kinh tế TP.HCM</span></footer>
+        </div>
+      </main>
+    </section>
+    <div id="toast" class="toast" role="status"></div>
+    <div id="modal-root"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
